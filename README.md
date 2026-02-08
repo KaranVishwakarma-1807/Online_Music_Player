@@ -4,10 +4,11 @@ A glassmorphism-themed, in-browser music player that lets users upload their own
 
 ## Preview
 
-> Place images/GIFs in `assets/` and update filenames if needed.
-
+> App Overview
 ![App overview](assets/screenshot-overview.png)
+> Library & Playlists
 ![Library & playlists](assets/screenshot-library.png)
+> Waveform + Playhead
 <video src="assets/screenrecord-waveform.mp4" autoplay loop muted playsinline width="100%"></video>
 
 ![Waveform + playhead](assets/screenshot-waveform.png)
