@@ -9,8 +9,8 @@ A glassmorphism-themed, in-browser music player that lets users upload their own
 > Library & Playlists
 ![Library & playlists](assets/screenshot-library.png)
 > Waveform + Playhead
-![Waveform Preview](assets/screenrecord-waveform.mp4)
-<video src="assets/screenrecord-waveform.mp4" autoplay loop muted playsinline width="100%">
+![Waveform Preview](assets/screenrecord-waveform.mov  )
+<video src="assets/screenrecord-waveform.mov" autoplay loop muted playsinline width="100%">
 Waveform Preview
 </video>
 
