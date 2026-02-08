@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Music Player</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <div class="title">
+        <h1>Music Player</h1>
+      </div>
+      <div class="row">
+        <button class="btn" id="clearStorageBtn">Clear Storage</button>
+      </div>
+    </div>
+
+    <div class="layout">
+      <div class="panel glass fade-in" style="animation-delay: 0.05s;">
+        <div class="section-title">Now Playing</div>
+        <div class="controls">
+          <div class="now-cover" id="nowCover">
+            <span>Cover</span>
+          </div>
+          <div class="now-meta">
+            <h3 id="nowTitle">No song loaded</h3>
+            <p id="nowPlaylist">Select or upload a track</p>
+            <div class="transport">
+              <button class="btn" id="prevBtn">Prev</button>
+              <button class="btn primary" id="playBtn">Play</button>
+              <button class="btn" id="nextBtn">Next</button>
+              <div class="row">
+                <label for="volume" class="badge">Volume</label>
+                <input class="range" id="volume" type="range" min="0" max="1" step="0.01" />
+              </div>
+            </div>
+            <div class="progress-wrap">
+              <div class="progress-top">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+              </div>
+              <input class="progress-bar" id="progress" type="range" min="0" max="100" value="0" step="0.1" />
+              <div class="waveform-wrap" id="waveformWrap">
+                <canvas class="waveform" id="waveform" width="700" height="90"></canvas>
+                <div class="playhead" id="playhead"></div>
+                <div class="wave-tooltip" id="waveTooltip">0:00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel glass fade-in" style="animation-delay: 0.15s;">
+        <div class="section-title">Upload & Playlist</div>
+        <div class="uploader">
+          <div class="input-group">
+            <label>Song file</label>
+            <input id="songFile" type="file" accept="audio/*" />
+          </div>
+          <div class="input-group">
+            <label>Cover image</label>
+            <input id="coverFile" type="file" accept="image/*" />
+          </div>
+          <div class="input-group">
+            <label>Song name</label>
+            <input id="songName" type="text" placeholder="Optional custom name" />
+          </div>
+          <div class="input-group">
+            <label>Playlist</label>
+            <div class="row">
+              <select id="playlistSelect"></select>
+              <input id="newPlaylist" type="text" placeholder="New playlist name" />
+              <button class="btn" id="createPlaylistBtn">Create</button>
+            </div>
+          </div>
+          <div class="row">
+            <button class="btn primary" id="addSongBtn">Add to Library</button>
+            <button class="btn danger" id="removeSongBtn">Remove Selected</button>
+          </div>
+          <div class="footer-note">Storage saves playlists, song metadata, and cover images. Audio files must be reselected after re-opening the app.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel glass fade-in" style="animation-delay: 0.25s;">
+      <div class="section-title">Library</div>
+      <div class="search-row">
+        <input id="searchInput" type="text" placeholder="Search in current playlist" />
+        <span class="badge" id="resultCount">0 results</span>
+      </div>
+      <div class="grid" id="libraryGrid"></div>
+    </div>
+
+    <div class="layout">
+      <div class="panel glass fade-in" style="animation-delay: 0.35s;">
+        <div class="section-title">Recent</div>
+        <div class="recent" id="recentList"></div>
+      </div>
+      <div class="panel glass fade-in" style="animation-delay: 0.45s;">
+        <div class="section-title">Playlists</div>
+        <div class="recent" id="playlistOverview"></div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="audio"></audio>
+
+  <script src="app.js"></script>
+</body>
+</html>
