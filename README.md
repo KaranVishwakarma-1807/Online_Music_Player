@@ -64,5 +64,5 @@ A glassmorphism-themed, in-browser music player that lets users upload their own
 
 ## License
 
-MIT Licence
+MIT Licence</br>
 This project is provided as-is for personal and educational use.
