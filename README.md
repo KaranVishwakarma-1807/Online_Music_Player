@@ -9,8 +9,7 @@ A glassmorphism-themed, in-browser music player that lets users upload their own
 > Library & Playlists
 ![Library & playlists](assets/screenshot-library.png)
 > Waveform + Playhead
-
-![Waveform + playhead](assets/screenshot-waveform.png)
+ ![Waveform + playhead](assets/screenshot-waveform.png)
 
 ## Features
 
