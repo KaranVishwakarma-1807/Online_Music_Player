@@ -14,6 +14,7 @@ A glassmorphism-themed, in-browser music player that lets users upload their own
 Waveform Preview
 </video>
 
+
 ![Waveform + playhead](assets/screenshot-waveform.png)
 
 ## Features
